@@ -1,0 +1,75 @@
+h1,h2,h3{
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+p{
+	line-height: 1.4;
+}
+
+pre{
+	padding: 0px;
+}
+
+#content{
+	max-width: 750px;
+	margin: auto;
+	padding: 2em;
+}
+
+table{
+	margin:auto;
+}
+
+table tr:nth-child(2n){
+	background-color: #d1ecff;
+}
+
+table th{
+	background-color: #d1ecff;
+	border-bottom: 1px solid #000 !important;
+}
+
+.search-box{
+	width:70%;
+}
+
+html{
+	height:100%;
+}
+
+body {
+	height:100%;
+	padding-bottom: 115px;
+}
+
+.footer {
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #ddd;
+	margin-bottom: 0px;
+}
+
+#fullscreen{
+	height:100%;
+}
+
+#editor{
+	font-family: monospace;
+	width:50%;
+	height: 100%;
+	border: 0;
+	border-right: 1px solid black;
+	padding: 50px;
+	resize: none;
+}
+
+#preview{
+	float: right;
+	width:50%;
+	height: 100%;
+	padding: 50px;
+	overflow-y: scroll;
+}

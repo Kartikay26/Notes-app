@@ -1,9 +1,14 @@
 import os, sys
+
 import yaml
+
+from redis import StrictRedis
+
 from flask import *
 
-
 app = Flask(__name__)
+
+r = StrictRedis()
 
 BASE_DIR = app.root_path
 

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	{{page_title}}
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+	
+	Loading...
+
+</div>
+
+<script type="text/javascript">
+$(function(){$.ajax({url:"/data/{{page_path}}.md",success:function(text){var converter = new showdown.Converter({'tables':'true'}); var html = converter.makeHtml(text); $("#content").empty().append(html);$('pre code').each(function(i, block) {hljs.highlightBlock(block);});},error:function(){window.location.href=window.location.href.replace(/(https?:\/\/.*?\/)(.*)/,"$1fourohfour");}})})
+</script>
+
+{% endblock %}

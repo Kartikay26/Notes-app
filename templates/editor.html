@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	{{page_title}}
+{% endblock %}
+
+{% block content %}
+
+<div id="fullscreen">
+	<textarea id="editor"></textarea>
+	<div id="preview"></div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<span class="text-muted">To Save changes, <a href="#">click here</a></span>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	converter = new showdown.Converter({'tables':'true'});
+	function reload_preview() {
+		console.log("FU");
+		var text = $("#editor").val();
+		var html = converter.makeHtml(text);
+		$("#preview").empty().append(html);
+		$('pre code').each(function(i, block) {hljs.highlightBlock(block);});
+	}
+
+$(function(){$.ajax({url:"/data/{{page_path}}.md",success:function(text){$("#editor").val(text);reload_preview()},error:function(){window.location.href=window.location.href.replace(/(https?:\/\/.*?\/)(.*)/,"$1fourohfour");}});$("#editor").keyup(reload_preview);});
+</script>
+{% endblock %}
