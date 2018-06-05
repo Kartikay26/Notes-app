@@ -2,10 +2,17 @@
 <html>
 <head>
 	<title>{% block title %}{% endblock %}</title>
+	<style type="text/css">
+		.hide-at-first{
+			visibility: hidden;
+		}
+	</style>
 	{% include "scripts.html" %}
 </head>
 <body>
 	{% include "titlebar.html" %}
 	{% block content %}{% endblock %}
+	{% block end %}{% endblock %}
+	{% include "flash.html"%}
 </body>
 </html>

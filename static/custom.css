@@ -41,6 +41,7 @@ html{
 body {
 	height:100%;
 	padding-bottom: 115px;
+	overflow-x: hidden;
 }
 
 .footer {
@@ -54,6 +55,7 @@ body {
 
 #fullscreen{
 	height:100%;
+	display: flex;
 }
 
 #editor{
@@ -62,8 +64,9 @@ body {
 	height: 100%;
 	border: 0;
 	border-right: 1px solid black;
-	padding: 50px;
+	padding: 0px;
 	resize: none;
+	font-size: 0.8em;
 }
 
 #preview{
@@ -72,4 +75,33 @@ body {
 	height: 100%;
 	padding: 50px;
 	overflow-y: scroll;
+}
+
+.CodeMirror{
+	height: 100% !important;
+}
+
+#flash_ms{
+	font-family: sans-serif;
+	font-size:0.8em;
+	width: 100%;
+	position: fixed;
+	top: 100px;
+	margin: auto;
+	z-index: 10;
+}
+
+#flash_m{
+	padding: 20px;
+	max-width: 500px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 10px 10px 20px 2px lightgrey;
+}
+
+#flash_m > button{
+	position: relative;
+    top: -3px;
 }

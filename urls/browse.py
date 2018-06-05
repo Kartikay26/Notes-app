@@ -1,4 +1,4 @@
-from config import *
+from notes_app import *
 
 @app.route('/notes/<path:url>')
 def browse(url):

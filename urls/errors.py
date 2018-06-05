@@ -1,4 +1,4 @@
-from config import *
+from notes_app import *
 
 @app.errorhandler(404)
 def not_found(error):

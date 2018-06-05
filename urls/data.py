@@ -1,4 +1,4 @@
-from config import *
+from notes_app import *
 
 @app.route('/data/<path:url>')
 def raw_data(url):
