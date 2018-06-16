@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Login
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	<h1>Login</h1>
+	<hr>
+	If you do not have an account, you can go to <a href="/register">register</a>.
+	<br><br><br>
+	<div class="container">
+		<form action="/login" method="POST">
+			<div class="form-group row">
+				<label for="username" class="col-sm-2 col-form-label">Username:</label>
+				<input type="text" name="username" class="form-control col-sm-10" placeholder="username">
+			</div>
+			<div class="form-group row">
+				<label for="password" class="col-sm-2 col-form-label">Password:</label>
+				<input type="password" name="password" class="form-control col-sm-10" placeholder="password">
+			</div>
+			<br>
+			<div class="form-group row">
+				<label for="submit" class="col-sm-2 col-form-label"></label>
+				<input type="submit" name="submit" value="Login" class="col-sm-10 btn btn-primary" style="width:100%">
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

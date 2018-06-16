@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Register
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	<h1>Register</h1>
+	<hr>
+	<div class="container">
+Fill this form to register; or go to <a href="/login">login</a>.
+<br><br><br>
+<form class="form" action="/register" method="POST">
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group row">
+  <label class="col-sm-4 col-form-label" for="username">Username*</label>  
+  
+  <input id="username" name="username" type="text" placeholder="username" class="form-control col-sm-8" required="">
+    
+</div>
+
+<!-- Password input-->
+<div class="form-group row">
+  <label class="col-sm-4 col-form-label" for="password">Password*</label>
+  
+    <input id="password" name="password" type="password" placeholder="password (no restrictions)" class="form-control col-sm-8" required="">
+    
+</div>
+
+<!-- Password input-->
+<div class="form-group row">
+  <label class="col-sm-4 col-form-label" for="password_confirm">Confirm Password*</label>
+  
+    <input id="password_confirm" name="password_confirm" type="password" placeholder="type password again" class="form-control col-sm-8" required="">
+    
+</div>
+
+<!-- Text input-->
+<div class="form-group row">
+  <label class="col-sm-4 col-form-label" for="email">Email</label>  
+  
+  <input id="email" name="email" type="email" placeholder="email@example.com" class="form-control col-sm-8">
+</div>
+
+<!-- Button -->
+<div class="form-group row">
+  <label class="col-sm-4 col-form-label" for="submit"></label>
+  
+    <button id="submit" name="submit" class="btn btn-primary">Register!</button>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+{% endblock %}

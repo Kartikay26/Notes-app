@@ -1,2 +1,12 @@
 # The following line is eval'ed, be careful
 secret: b'k\xf6\xfd<~\x81\x97A\x01\xde\x01\xca\xcc\xad\xa8d'
+# sql uri
+sql_uri: mysql://root:hunter2@localhost/notes_app
+# default ratings
+page_def_rating: 1200
+user_def_rating: 1000
+new_page_threshold: 2000
+helpful_page_rating_increase: 100
+review_pass_rating_increase: 50
+review_fail_rating_decrease: 100
+bad_page_rating_decrease: 200

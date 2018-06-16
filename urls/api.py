@@ -4,15 +4,15 @@ import base64
 
 @app.route('/api/save/<path:url>',methods=["POST"])
 def save(url):
-	file_path = os.path.join(BASE_DIR,"data/"+url)
-	data = base64.b64decode(request.form['text'])
-	if not os.path.exists(file_path):
-		raise InvalidUsage("Cannot create new file from editor!")
-	if not os.path.exists(file_path+".new"):
-		open(file_path+".new",'w').write(data)
-	else:
-		raise InvalidUsage("Already pending review!")
-	flash("Saved for review!")
+	# file_path = os.path.join(BASE_DIR,"data/"+url)
+	# data = base64.b64decode(request.form['text'])
+	# if not os.path.exists(file_path):
+	# 	raise InvalidUsage("Cannot create new file from editor!")
+	# if not os.path.exists(file_path+".new"):
+	# 	open(file_path+".new",'w').write(data)
+	# else:
+	# 	raise InvalidUsage("Already pending review!")
+	# flash("Saved for review!")
 	return "OK"
 
 @app.route('/api/contents')

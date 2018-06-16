@@ -7,9 +7,15 @@
 <li class="nav-item">
 	<a class="nav-link" href="/editor/{{page_path}}"> Edit </a>
 </li>
+{% if not session['logged_in'] %}
 <li class="nav-item">
 	<a class="nav-link" href="/login"> Login </a>
 </li>
+{% else %}
+<li class="nav-item">
+	<a class="nav-link" href="/logout"> Logout </a>
+</li>
+{% endif %}
 <li class="nav-item">
 	<a class="nav-link" href="/dashboard"> Dashboard </a>
 </li>
